@@ -1,6 +1,6 @@
 {
   "name": "netlify-plugin-cache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generic cache plugin for saving and restoring files and/or folders between Netlify builds",
   "author": "Jake Jarvis <jake@jarv.is>",
   "license": "MIT",
