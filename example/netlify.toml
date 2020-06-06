@@ -1,5 +1,10 @@
+# only used in this example to build from parent directory
 [[plugins]]
-package = "netlify-plugin-cache"
+package = "@netlify/plugin-local-install-core"
+
+# package would normally equal `netlify-plugin-cache`
+[[plugins]]
+package = "../"
   [plugins.inputs]
   paths = ["cached"]
 
