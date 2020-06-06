@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "netlify-plugin-cache-example",
+  "version": "1.0.0",
+  "description": "Just a test of netlify-plugin-cache.",
+  "dependencies": {
+    "netlify-plugin-cache": "*",
+    "netlify-plugin-debug-cache": "^1.0.3"
+  }
+}

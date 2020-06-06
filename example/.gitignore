@@ -1,0 +1,5 @@
+# Local Netlify folder
+.netlify
+
+cache-output.json
+package-lock.json

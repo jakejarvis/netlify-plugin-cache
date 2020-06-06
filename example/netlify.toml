@@ -1,0 +1,7 @@
+[[plugins]]
+package = "netlify-plugin-cache"
+  [plugins.inputs]
+  paths = ["cached"]
+
+[[plugins]]
+package = "netlify-plugin-debug-cache"
