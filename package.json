@@ -1,0 +1,25 @@
+{
+  "name": "netlify-plugin-cache",
+  "version": "1.0.0",
+  "description": "Generic cache plugin for saving and restoring files and/or folders between Netlify builds",
+  "author": "Jake Jarvis <jake@jarv.is>",
+  "license": "MIT",
+  "main": "index.js",
+  "homepage": "https://github.com/jakejarvis/netlify-plugin-cache#readme",
+  "bugs": "https://github.com/jakejarvis/netlify-plugin-cache/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakejarvis/netlify-plugin-cache.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "netlify",
+    "netlify-plugin",
+    "cache",
+    "ci",
+    "build",
+    "plugin"
+  ]
+}
