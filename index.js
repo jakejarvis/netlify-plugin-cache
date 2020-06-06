@@ -7,7 +7,7 @@ module.exports = {
       const files = await cache.list(inputs.paths)
       console.log(`Successfully restored: ${inputs.paths.join(', ')} ... ${files.length} files in total.`)
     } else {
-      console.log(`A cache of ${inputs.paths.join(', ')} doesn't exist (yet).`)
+      console.log(`A cache of '${inputs.paths.join(', ')}' doesn't exist (yet).`)
     }
   },
 
@@ -24,7 +24,10 @@ module.exports = {
         text: `${inputs.paths.join(', ')}`,
       })
     } else {
-      console.log(`Failed caching ${inputs.paths.join(', ')}. :(`)
+      // this probably happened because the default `paths` is set, so provide instructions to fix
+      console.log(`Attempted to cache: ${inputs.paths.join(', ')} ... but failed. :(`)
+      console.log(`Try setting the 'paths' input appropriately in your netlify.toml or netlify.yml.`)
+      console.log(`More details: https://jrvs.io/netlify-cache-usage`)
     }
   },
 }

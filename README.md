@@ -1,4 +1,4 @@
-# netlify-plugin-cache
+# Netlify Plugin: Custom Cache
 
 [![npm](https://img.shields.io/npm/v/netlify-plugin-cache?logo=npm&color=red)](https://www.npmjs.com/package/netlify-plugin-cache)
 
@@ -18,7 +18,9 @@ package = "netlify-plugin-cache"
   paths = ["resources", "_vendor", "folder/file.md"]
 ```
 
-This plugin only takes one input (which is required) named `paths`, an array of paths to files and/or folders relative to your project's root. These files/folders are restored before a build and saved in cache after a build **if it is successful**.
+This plugin only takes one input named `paths`, an array of files and/or directories relative to your project's root. These files/directories are restored before a build and saved in cache after a build **if it is successful**.
+
+**🚨 Important:** `paths` defaults to `[".cache"]`, but it's **highly recommended** you set this yourself based on the tools you're using. See examples below.
 
 Read more about plugin configuration at [the official Netlify Plugin docs](https://docs.netlify.com/configure-builds/build-plugins/#install-a-plugin).
 
@@ -40,7 +42,7 @@ You can add their debug plugin **after** this plugin in your `netlify.toml`. (An
 package = "netlify-plugin-debug-cache"
 ```
 
-The plugin will generate a file named `cache-output.json` at the root of your project's publish directory. [Learn more about this plugin here.](https://github.com/netlify-labs/netlify-plugin-debug-cache)
+The plugin will generate a file named `cache-output.json` at the root of your project's publish directory. [See an example file](https://gist.github.com/jakejarvis/dff606289e8b5d6be42d317e425bbee6#file-cache-output-json) or [learn more about this plugin](https://github.com/netlify-labs/netlify-plugin-debug-cache).
 
 ## Licenses
 
