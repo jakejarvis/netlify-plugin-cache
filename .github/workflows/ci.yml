@@ -4,14 +4,23 @@ on: [push, pull_request]
 
 jobs:
   build:
+    strategy:
+      matrix:
+        node: [14.x, 13.x, 12.x, 10.x]
+      fail-fast: false
     runs-on: ubuntu-latest
+    name: Node ${{ matrix.node }}
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
       with:
-        node-version: '12'
-    - run: npm install -g netlify-cli
-    - run: netlify build
+        node-version: ${{ matrix.node }}
+    - name: Install dependencies
+      run: npm install --no-package-lock --no-optional
+    - name: Run tests
+      run: npm run test
+    - name: Build example site locally with plugin
+      run: npm run build
       env:
         NETLIFY_SITE_ID: '8ceb6251-650b-481a-976c-fec1a4f95800'
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
