@@ -26,7 +26,7 @@ module.exports = {
     } else {
       // this probably happened because the default `paths` is set, so provide instructions to fix
       console.log(`Attempted to cache: ${inputs.paths.join(', ')} ... but failed. :(`)
-      console.log(`Try setting the 'paths' input appropriately in your netlify.toml or netlify.yml.`)
+      console.log(`Try setting the 'paths' input appropriately in your netlify.toml configuration.`)
       console.log(`More details: https://jrvs.io/netlify-cache-usage`)
     }
   },
