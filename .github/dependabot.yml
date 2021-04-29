@@ -1,0 +1,16 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "06:00"
+    timezone: America/New_York
+  open-pull-requests-limit: 99
+  versioning-strategy: increase
+  ignore:
+  - dependency-name: xo
+    versions:
+    - 0.37.1
+    - 0.38.1
+    - 0.38.2
