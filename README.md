@@ -28,7 +28,7 @@ Read more about plugin configuration at [the official Netlify Plugin docs](https
 - **Gatsby:** By default, the `.cache` directory holds persistent data between builds. You can also cache the `dist` directory to avoid completely rebuilding the entire site on each deploy. [More info here.](https://www.gatsbyjs.org/docs/build-caching/)
 - **Jekyll:** A caching API was added as of v4. The notoriously slow SSG can become (relatively) faster by caching the `.jekyll-cache` directory. [More info here.](https://jekyllrb.com/tutorials/cache-api/)
 - **Next.js:** The `.next` directory holds the build output. [More info here.](https://nextjs.org/docs/api-reference/next.config.js/setting-a-custom-build-directory)
-- **Anything else:** This is the reason I kept this plugin as generic as possible! Research the caching behavior of your static site generator (and how to customize it if necessary). Feel free to open a PR and list it here as well!
+- **Anything else:** This is the reason I kept this plugin as generic as possible! Research the caching behavior of your static site generator (and how to customize it if necessary). Check if the cache directory is already cached by netlify in their [run-build-function.sh](https://github.com/netlify/build-image/blob/focal/run-build-functions.sh). Feel free to open a PR and list it here as well!
 
 ## 🐛 Debugging
 
